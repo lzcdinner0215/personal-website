@@ -1,0 +1,436 @@
+/* 基本样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 暗色主题 */
+:root {
+    --bg-dark: #121212;
+    --bg-darker: #0a0a0a;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --neon-color: #00ffea;
+    --neon-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+    --accent-dark: #1a1a1a;
+    --border-color: #333333;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 导航栏样式 */
+header {
+    background-color: var(--bg-darker);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--neon-color);
+    text-shadow: var(--neon-shadow);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.nav-links li {
+    margin-right: 1rem;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--neon-color);
+    text-shadow: var(--neon-shadow);
+}
+
+/* Hero区域样式 */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: neon-glow 2s ease-in-out infinite alternate;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+/* Neon文字效果 */
+.neon-text {
+    color: var(--neon-color);
+    text-shadow: var(--neon-shadow);
+}
+
+/* 按钮样式 */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    margin: 0 10px;
+    border: 2px solid var(--neon-color);
+    border-radius: 30px;
+    color: var(--neon-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    background: transparent;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    background-color: var(--neon-color);
+    color: var(--bg-dark);
+    box-shadow: var(--neon-shadow);
+}
+
+.btn-primary {
+    background-color: var(--neon-color);
+    color: var(--bg-dark);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--neon-color);
+}
+
+/* 关于我页面样式 */
+.profile-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.avatar-glow {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 50%;
+    background: var(--neon-shadow);
+    animation: avatar-pulse 3s ease-in-out infinite alternate;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.bio {
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skills-section {
+    margin: 2rem 0;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.skill-tag {
+    background: var(--accent-dark);
+    border: 1px solid var(--neon-color);
+    color: var(--neon-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: var(--neon-color);
+    color: var(--bg-dark);
+    box-shadow: var(--neon-shadow);
+}
+
+.timeline-section {
+    margin-top: 3rem;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--neon-color);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.timeline-date {
+    width: 50%;
+    text-align: right;
+    padding-right: 2rem;
+    font-weight: bold;
+    color: var(--neon-color);
+}
+
+.timeline-content {
+    width: 50%;
+    padding-left: 2rem;
+}
+
+.timeline-content h3 {
+    color: var(--neon-color);
+    margin-bottom: 0.5rem;
+}
+
+/* 作品集页面样式 */
+.portfolio-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 2rem 0;
+}
+
+.filter-btn {
+    background: var(--accent-dark);
+    border: 1px solid var(--neon-color);
+    color: var(--neon-color);
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--neon-color);
+    color: var(--bg-dark);
+    box-shadow: var(--neon-shadow);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.portfolio-card {
+    background: var(--accent-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--neon-shadow);
+    border-color: var(--neon-color);
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.portfolio-card-content {
+    padding: 1.5rem;
+}
+
+.portfolio-card h3 {
+    color: var(--neon-color);
+    margin-bottom: 0.5rem;
+}
+
+/* 联系页面样式 */
+.contact-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.contact-form {
+    background: var(--accent-dark);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--neon-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: var(--bg-darker);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-primary);
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--neon-color);
+    box-shadow: 0 0 5px var(--neon-color);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--accent-dark);
+    border: 1px solid var(--neon-color);
+    color: var(--neon-color);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: var(--neon-color);
+    color: var(--bg-dark);
+    box-shadow: var(--neon-shadow);
+}
+
+/* 动画效果 */
+@keyframes neon-glow {
+    from {
+        text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+    }
+    to {
+        text-shadow: 0 0 15px #00ffea, 0 0 30px #00ffea, 0 0 45px #00ffea;
+    }
+}
+
+@keyframes avatar-pulse {
+    from {
+        box-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+    }
+    to {
+        box-shadow: 0 0 20px #00ffea, 0 0 40px #00ffea;
+    }
+}
+
+@keyframes skill-glow {
+    from {
+        box-shadow: 0 0 5px #00ffea;
+    }
+    to {
+        box-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+    }
+    
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+    
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        flex-direction: column;
+    }
+    
+    .timeline-date {
+        width: auto;
+        text-align: left;
+        padding-right: 0;
+        padding-left: 60px;
+    }
+    
+    .timeline-content {
+        width: auto;
+        padding-left: 60px;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}

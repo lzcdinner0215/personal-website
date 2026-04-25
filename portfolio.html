@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品集 - 个人网站</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="nav-brand">我的个人网站</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">关于我</a></li>
+                    <li><a href="portfolio.html" class="active">作品</a></li>
+                    <li><a href="contact.html">联系</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main class="portfolio-content">
+            <h1 class="neon-text">我的作品</h1>
+            <p>以下是我近期完成的一些项目</p>
+            
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="web">网页设计</button>
+                <button class="filter-btn" data-filter="app">应用程序</button>
+                <button class="filter-btn" data-filter="ai">人工智能</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-card" data-category="web">
+                    <img src="https://via.placeholder.com/300x200/1a1a1a/00ffea?text=项目1" alt="项目1">
+                    <div class="portfolio-card-content">
+                        <h3>企业官网设计</h3>
+                        <p>为一家科技公司设计的响应式官方网站，采用现代化设计风格。</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card" data-category="app">
+                    <img src="https://via.placeholder.com/300x200/1a1a1a/00ffea?text=项目2" alt="项目2">
+                    <div class="portfolio-card-content">
+                        <h3>移动应用界面</h3>
+                        <p>一款任务管理应用的UI/UX设计，注重用户体验和交互设计。</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card" data-category="ai">
+                    <img src="https://via.placeholder.com/300x200/1a1a1a/00ffea?text=项目3" alt="项目3">
+                    <div class="portfolio-card-content">
+                        <h3>AI助手界面</h3>
+                        <p>为AI助手产品设计的对话界面，支持多模态交互。</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card" data-category="web">
+                    <img src="https://via.placeholder.com/300x200/1a1a1a/00ffea?text=项目4" alt="项目4">
+                    <div class="portfolio-card-content">
+                        <h3>电商平台</h3>
+                        <p>电子商务平台的前端设计，包含商品展示、购物车和支付流程。</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
